@@ -2,7 +2,7 @@ import { Item } from "semantic-ui-react";
 
 import SubHeader from "../atoms/SubHeader";
 import Question from "../molecules/Question";
-import { QuestionType } from "../../types/Question";
+import { Question as QuestionType } from "../../types/Question";
 
 type Props = {
 	questions: QuestionType[];
@@ -16,6 +16,7 @@ export default function QuestionList(props: Props) {
 				{props.questions.map((question) => {
 					return (
 						<Question
+							id={question.id}
 							title={question.title}
 							content={question.content}
 							user_name={question.user_name}
