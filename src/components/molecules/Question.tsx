@@ -14,6 +14,7 @@ export default function Question(props: Props) {
 						<Link href="/answers/answer">{props.title}</Link>
 					</Item.Header>
 					<Item.Meta>{props.created_at.toString()}</Item.Meta>
+					<Item.Meta>{props.user_name}</Item.Meta>
 				</Item.Content>
 			</Item>
 			<Divider />
