@@ -26,8 +26,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const Home: NextPage<Props> = (props: Props) => {
 	return (
 		<Layout>
-			{props.questionList.questions[0].title}
-			<QuestionList />
+			<QuestionList questions={props.questionList.questions} />
 		</Layout>
 	);
 };
