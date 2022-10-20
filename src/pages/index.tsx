@@ -1,15 +1,29 @@
-import type { NextPage } from "next";
-import Link from "next/link";
+import type { NextPage, GetServerSideProps } from "next";
 
 import Layout from "../components/Layout";
+import QuestionList from "../components/organisms/QuestionList";
 
-const Home: NextPage = () => {
+import fetchQuestions from "../lib/api/Questions";
+
+type Props = {
+	title: String;
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+	const allPostsData = fetchQuestions();
+
+	const props: Props = {
+		title: allPostsData,
+	};
+
+	return { props: props };
+};
+
+const Home: NextPage<Props> = (props: Props) => {
 	return (
 		<Layout>
-			<div>
-				home
-				<Link href="/answers/answer">Answer page</Link>
-			</div>
+			{props.title}
+			<QuestionList />
 		</Layout>
 	);
 };
