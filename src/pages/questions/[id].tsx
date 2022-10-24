@@ -1,5 +1,4 @@
 import { GetServerSideProps } from "next";
-import { useRouter } from "next/router";
 
 import Layout from "../../components/Layout";
 import QuestionDetailContent from "../../components/organisms/QuestionDetailContent";
@@ -31,7 +30,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 	const props: Props = {
 		question: question,
 	};
-	console.log("props1", props);
 	return { props: props };
 };
 

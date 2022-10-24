@@ -7,7 +7,9 @@ type Props = {
 export default function MainHeader(props: Props) {
 	return (
 		<>
-			<Header as="h2">{props.title}</Header>
+			<Header as="h2" dividing>
+				{props.title}
+			</Header>
 		</>
 	);
 }

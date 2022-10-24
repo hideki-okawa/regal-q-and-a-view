@@ -4,10 +4,10 @@ type Props = {
 	title: string;
 };
 
-export default function MainHeader(props: Props) {
+export default function IconHeader(props: Props) {
 	return (
 		<>
-			<Header as="h3">
+			<Header as="h2" dividing>
 				<Icon name="question" />
 				<Header.Content>{props.title}</Header.Content>
 			</Header>

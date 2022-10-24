@@ -1,4 +1,7 @@
-import QuestionHeader from "../atoms/QuestionHeader";
+import { Container } from "semantic-ui-react";
+
+import IconHeader from "../atoms/IconHeader";
+import QuestionContent from "../atoms/QuestionContent";
 
 import { Question as QuestionType } from "../../types/Question";
 
@@ -9,7 +12,10 @@ type Props = {
 export default function QuestionDetailContent(props: Props) {
 	return (
 		<>
-			<QuestionHeader title={props.question.title} />
+			<Container text>
+				<IconHeader title={props.question.title} />
+				<QuestionContent content={props.question.content} />
+			</Container>
 			{/* <Item.Group>
 				{props.questions.map((question) => {
 					return (
