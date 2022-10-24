@@ -3,7 +3,7 @@ import type { NextPage, GetServerSideProps } from "next";
 import Layout from "../components/Layout";
 import QuestionList from "../components/organisms/QuestionList";
 
-import fetchQuestions from "../lib/api/Question";
+import { fetchQuestions } from "../lib/api/Question";
 
 import { QuestionList as QuestionArray } from "../types/Question";
 

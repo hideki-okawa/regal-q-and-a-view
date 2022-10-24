@@ -11,7 +11,7 @@ export default function Question(props: Props) {
 			<Item>
 				<Item.Content>
 					<Item.Header as="a">
-						<Link href="/answers/answer">{props.title}</Link>
+						<Link href={`/questions/${props.id}`}>{props.title}</Link>
 					</Item.Header>
 					<Item.Meta>{props.created_at.toString()}</Item.Meta>
 					<Item.Meta>{props.user_name}</Item.Meta>
