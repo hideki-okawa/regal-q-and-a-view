@@ -4,9 +4,11 @@ import IconHeader from "../atoms/IconHeader";
 import QuestionContent from "../atoms/QuestionContent";
 
 import { Question as QuestionType } from "../../types/Question";
+import { Answer } from "../../types/Answer";
 
 type Props = {
 	question: QuestionType;
+	answers: Answer[];
 };
 
 export default function QuestionDetailContent(props: Props) {
@@ -14,7 +16,11 @@ export default function QuestionDetailContent(props: Props) {
 		<>
 			<Container>
 				<IconHeader title={props.question.title} icon="question" />
-				<QuestionContent content={props.question.content} />
+				<QuestionContent question={props.question} />
+				<IconHeader title="弁護士からの回答タイムライン" icon="answer" />
+				{props.answers.map((answer) => {
+					return <div>{answer.comment}</div>;
+				})}
 			</Container>
 			{/* <Item.Group>
 				{props.questions.map((question) => {

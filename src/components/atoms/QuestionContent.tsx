@@ -1,11 +1,15 @@
+import { Question as QuestionType } from "../../types/Question";
+
 type Props = {
-	content: string;
+	question: QuestionType;
 };
 
-export default function MainHeader(props: Props) {
+export default function QuestionContent(props: Props) {
 	return (
 		<>
-			<p>{props.content}</p>
+			<p>公開日時: {props.question.created_at}</p>
+			<p>{props.question.content}</p>
+			<p>{props.question.user_name} さん</p>
 		</>
 	);
 }
