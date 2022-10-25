@@ -23,7 +23,7 @@ export default function IconHeader(props: Props) {
 	return (
 		<>
 			<Header as="h2" dividing>
-				<HeaderIcon name="question" />
+				<HeaderIcon name={props.icon} />
 				<Header.Content>{props.title}</Header.Content>
 			</Header>
 		</>

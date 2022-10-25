@@ -2,6 +2,7 @@ import type { NextPage, GetServerSideProps } from "next";
 
 import Layout from "../components/Layout";
 import QuestionList from "../components/organisms/QuestionList";
+import NewQuestionButton from "../components/atoms/NewQuestionButton";
 
 import { fetchQuestions } from "../lib/api/Question";
 
@@ -26,6 +27,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 const Home: NextPage<Props> = (props: Props) => {
 	return (
 		<Layout>
+			<NewQuestionButton />
 			<QuestionList questions={props.questionList.questions} />
 		</Layout>
 	);
