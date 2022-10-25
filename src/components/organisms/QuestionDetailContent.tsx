@@ -12,8 +12,8 @@ type Props = {
 export default function QuestionDetailContent(props: Props) {
 	return (
 		<>
-			<Container text>
-				<IconHeader title={props.question.title} />
+			<Container>
+				<IconHeader title={props.question.title} icon="question" />
 				<QuestionContent content={props.question.content} />
 			</Container>
 			{/* <Item.Group>
