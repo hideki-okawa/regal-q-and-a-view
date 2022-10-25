@@ -4,6 +4,7 @@ export type Answer = {
     comment: string
     user_name: string
     is_lawyer: boolean
+    helpful_count: number
     created_at: Date
 }
 

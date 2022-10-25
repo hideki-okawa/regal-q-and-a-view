@@ -2,6 +2,7 @@ import { Container } from "semantic-ui-react";
 
 import IconHeader from "../atoms/IconHeader";
 import QuestionContent from "../atoms/QuestionContent";
+import AnswerContent from "../atoms/AnswerContent";
 
 import { Question as QuestionType } from "../../types/Question";
 import { Answer } from "../../types/Answer";
@@ -19,7 +20,7 @@ export default function QuestionDetailContent(props: Props) {
 				<QuestionContent question={props.question} />
 				<IconHeader title="弁護士からの回答タイムライン" icon="answer" />
 				{props.answers.map((answer) => {
-					return <div>{answer.comment}</div>;
+					return <AnswerContent answer={answer} />;
 				})}
 			</Container>
 			{/* <Item.Group>

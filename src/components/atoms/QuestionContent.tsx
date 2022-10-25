@@ -7,7 +7,7 @@ type Props = {
 export default function QuestionContent(props: Props) {
 	return (
 		<>
-			<p>公開日時: {props.question.created_at}</p>
+			<p>公開日時: {props.question.created_at.toString()}</p>
 			<p>{props.question.content}</p>
 			<p>{props.question.user_name} さん</p>
 		</>
