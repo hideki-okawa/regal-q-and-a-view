@@ -18,6 +18,14 @@ export function signUp(
 	});
 }
 
+export function logIn(email: string, password: string) {
+	const url = `${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/auth/sign_in`;
+	return axios.post(url, {
+		email: email,
+		password: password,
+	});
+}
+
 export function getCurrentUser() {
 	// 未認証なら何も返さない
 	if (
